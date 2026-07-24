@@ -110,3 +110,38 @@ styleElem.innerHTML = `
     }
 `;
 document.head.appendChild(styleElem);
+
+document.querySelectorAll('.click-fx').forEach(element => {
+    element.addEventListener('click', function(e) {
+        let ripple = document.createElement('div');
+        ripple.className = 'click-ripple';
+        document.body.appendChild(ripple);
+
+        ripple.style.left = e.clientX + 'px';
+        ripple.style.top = e.clientY + 'px';
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
+const styleElem = document.createElement('style');
+styleElem.innerHTML = `
+    .click-ripple {
+        position: fixed;
+        width: 15px;
+        height: 15px;
+        background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        animation: rippleAnim 0.6s ease-out forwards;
+        z-index: 99999;
+        pointer-events: none;
+    }
+    @keyframes rippleAnim {
+        0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        100% { transform: translate(-50%, -50%) scale(20); opacity: 0; }
+    }
+`;
+document.head.appendChild(styleElem);
