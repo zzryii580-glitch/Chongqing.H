@@ -119,3 +119,112 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chongqing Design - Cyberpunk Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <div class="hologram-grid"></div>
+
+    <!-- Header Responsif -->
+    <header class="cyber-header">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">CHONGQING<span class="highlight">.DESIGN</span></span>
+        </div>
+        <nav class="cyber-nav">
+            <button onclick="switchPage('beranda')" class="nav-btn click-fx active" id="btn-beranda">Beranda</button>
+            <button onclick="switchPage('portofolio')" class="nav-btn click-fx" id="btn-portofolio">Portofolio</button>
+            <button onclick="switchPage('tentang')" class="nav-btn click-fx" id="btn-tentang">Tentang</button>
+            <button onclick="switchPage('kontak')" class="nav-btn click-fx" id="btn-kontak">Kontak</button>
+        </nav>
+    </header>
+
+    <!-- KUMPULAN HALAMAN TERPISAH -->
+    <main class="main-container">
+
+        <!-- Halaman 1: Beranda -->
+        <section id="beranda" class="page active-page">
+            <div class="hero-content">
+                <div class="cyber-badge">[ SYSTEM ONLINE // SECTOR 09 ]</div>
+                <h1 class="glitch-title">FUTURE DESIGN STUDIO</h1>
+                <p>Estetika arsitektur vertikal & neon distrik Chongqing China untuk karya visual Anda.</p>
+                <div class="hero-btns">
+                    <button onclick="switchPage('portofolio')" class="cyber-btn click-fx">Lihat Portofolio</button>
+                    <a href="https://chat.whatsapp.com/KTXEj4Gf2yr2Qx97uU7YBW" target="_blank" class="cyber-btn alt click-fx">
+                        <i class="fab fa-whatsapp"></i> Grup WA
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman 2: Portofolio -->
+        <section id="portofolio" class="page">
+            <h2 class="section-title"><span>01 //</span> Portofolio Desain</h2>
+            <p class="section-subtitle">Contoh karya visual Anda.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card click-fx">
+                    <div class="card-img" style="background-image: url('assets/portfolio/design1.jpg');"></div>
+                    <div class="card-info">
+                        <h3>Cyberpunk UI/UX</h3>
+                        <p>Konsep antarmuka masa depan.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card click-fx">
+                    <div class="card-img" style="background-image: url('assets/portfolio/design2.jpg');"></div>
+                    <div class="card-info">
+                        <h3>Neon Poster Art</h3>
+                        <p>Desain visual distrik neon.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card click-fx">
+                    <div class="card-img" style="background-image: url('assets/portfolio/design3.jpg');"></div>
+                    <div class="card-info">
+                        <h3>Mecha Branding</h3>
+                        <p>Identitas merek robotik.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman 3: Tentang Perusahaan -->
+        <section id="tentang" class="page">
+            <div class="about-container">
+                <h2 class="section-title"><span>02 //</span> Tentang Kami</h2>
+                <p class="about-text">
+                    Terinspirasi dari kemegahan struktur jembatan bertingkat dan lautan lampu neon **Chongqing, China**. <strong>Chongqing Design</strong> adalah studio kreatif masa depan yang menghadirkan solusi desain grafis, UI/UX, dan branding berkarakter kuat dan futuristik.
+                </p>
+            </div>
+        </section>
+
+        <!-- Halaman 4: Kontak & WhatsApp -->
+        <section id="kontak" class="page">
+            <h2 class="section-title"><span>03 //</span> Kontak & WA</h2>
+            <div class="contact-box">
+                <p style="margin-bottom: 20px;">Hubungi nomor WhatsApp resmi kami:</p>
+                <a href="https://wa.me/6283189483134?text=Halo%20Chongqing%20Design,%20saya%20tertarik%20menggunakan%20jasa%20Anda." target="_blank" class="wa-main-btn click-fx">
+                    <i class="fab fa-whatsapp"></i> 0831-8948-3134
+                </a>
+                <div style="margin-top: 25px;">
+                    <a href="https://chat.whatsapp.com/KTXEj4Gf2yr2Qx97uU7YBW" target="_blank" class="wa-group-link click-fx">
+                        <i class="fas fa-users"></i> Gabung Grup WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
